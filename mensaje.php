@@ -12,8 +12,10 @@
         <title>Mensaje</title>
     </head>
     <body>
+        <h1>
         <?php
-         print_r( $_GET['mensaje']);
+         echo ( $_GET['mensaje']);
         ?>
+        </h1>
     </body>
 </html>
