@@ -40,7 +40,7 @@ $_SESSION['itemsEnCesta'] = $itemsEnCesta;
         <title>Programando con Café - Carrito de compras con PHP</title>
     </head>
     <body>
-        <?php include_once 'Include/Cabezera.php'; ?>
+        <?php include_once 'Cabezera.php'; ?>
         <div>
             <form action="CapaNegocios/Vent_RegistrarVenta.php" method="post">
                 <table border="1">

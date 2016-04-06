@@ -28,8 +28,8 @@ class Conexion {
     function Conexion() {
         $this->BaseDatos = "bdtutorial";
         $this->Servidor = "localhost";
-        $this->Usuario = "uniminuto";
-        $this->Clave = "uniminuto";
+        $this->Usuario = "root";
+        $this->Clave = "";
     }
 
     //Metodo para conectarnos a la base de datos

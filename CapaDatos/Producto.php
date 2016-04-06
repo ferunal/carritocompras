@@ -11,7 +11,7 @@
  *
  * @author lchacon
  */
-include_once './Conexion.php';
+include_once 'Conexion.php';
 class Producto {
     //Variable de la clase
     private $codigoProducto;

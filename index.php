@@ -1,20 +1,46 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<?php
+include_once 'CapaDatos/Producto.php';
+$pro = new Producto();
+$lista = $pro->buscarProductoTodos();
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>Hola</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Programando con Café - Carrito de compras con PHP</title>
     </head>
     <body>
-        Hola
+        <?php include_once 'Cabezera.php'; ?>
+        <div>
+        <table border="1">
+            <tr style="background-color: chocolate">
+                <td colspan="4" >Listado Producto</td>
+            </tr>
+            <tr style="background-color: chocolate">
+                <td>Código</td>
+                <td>Nombre</td>
+                <td>Precio</td>
+                <td>Proceso</td>
+            </tr>
         <?php
-        $variable = "Hola mundo";
-        echo "Hola mundo";
-        print_r($variable);
+         if(count($lista)>0){
+             for($i=0;$i<(count($lista));$i++) {
+                $dirModifica="modificarProducto.php?codigoProducto=".$lista[$i]['codigoProducto'];
+                $dirAnadir="anadirCarrito.php?codigoProducto=".$lista[$i]['codigoProducto'];
         ?>
+            <tr>
+                <td><?php echo ($lista[$i]['codigoProducto']);?></td>
+                <td><?php echo ($lista[$i]['nombre']);?></td>
+                <td><?php echo ($lista[$i]['precio']);?></td>
+                <td><a href="<?php echo $dirModifica;?>">Modificar</a> |
+                    <a href="<?php echo $dirAnadir;?>">Añadir</a>
+                </td>
+            </tr>
+        <?php
+             }
+         }
+        ?>
+        </table>
+        </div>
     </body>
 </html>

@@ -10,7 +10,7 @@ $lista = $ven->buscarVenta();
         <title>Programando con Café - Carrito de compras con PHP</title>
     </head>
     <body>
-        <?php include_once 'Include/Cabezera.php'; ?>
+        <?php include_once 'Cabezera.php'; ?>
         <div>
         <table border="1">
             <tr style="background-color: chocolate">

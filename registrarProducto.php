@@ -5,7 +5,7 @@
         <title>Programando con Café - Carrito de compras con PHP</title>
     </head>
     <body>
-        <?php include_once 'Include/Cabezera.php'; ?>
+        <?php include_once 'Cabezera.php'; ?>
         <form method="post" action="CapaNegocios/Prod_RegistrarProducto.php">
             <div>
                 <table border="1">
